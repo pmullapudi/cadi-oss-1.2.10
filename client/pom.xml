@@ -40,18 +40,7 @@
 					<outputDirectory>target</outputDirectory>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<version>2.4</version>
-				<configuration>
-					<outputDirectory>target</outputDirectory>
-					<skipSource>false</skipSource>
-					<attach>false</attach>
-					<forceCreation>true</forceCreation>
-					<useDefaultManifestFile>true</useDefaultManifestFile>
-				</configuration>
-			</plugin>
+			
 		
 			<!-- plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
