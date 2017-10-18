@@ -12,6 +12,22 @@
 		<name>AT&amp;T</name>
 	</organization>
 	<packaging>pom</packaging>
+	<url>https://github.com/att/AAF</url>
+	<description>CADI</description>
+	<licenses>
+		<license>
+		<name>BSD License</name>
+		<url> </url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+		<name>Jonathan Gathman</name>
+		<email></email>
+	<organization>ATT</organization>
+	<organizationUrl></organizationUrl>
+		</developer>
+	</developers>
 
 	<properties>
 		<skipSigning>true</skipSigning>
