@@ -1,0 +1,393 @@
+<!--
+    Copyright (c) 2017 AT&T Intellectual Property. All rights reserved.
+ -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.att.cadi</groupId>
+	<artifactId>parent</artifactId>
+	<name>CADI Parent POM (Code, Access, Data, Identity)</name>
+	<version>1.2.10</version>
+	<inceptionYear>2015-07-20</inceptionYear>
+	<organization>
+		<name>AT&amp;T</name>
+	</organization>
+	<packaging>pom</packaging>
+
+	<properties>
+		<skipSigning>true</skipSigning>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.innoVersion>1.2.11</project.innoVersion>
+		<project.authClientVersion>2.6</project.authClientVersion>
+		<!-- project.dme2Version>2.6.29</project.dme2Version -->
+		<!--project.dme2Version>2.8.2.5</project.dme2Version -->
+		<!-- <project.dme2Version>2.8.5.8</project.dme2Version>  -->
+		<project.dme2Version>3.1.200</project.dme2Version>
+		<!-- jetty-version>8.1.7.v20120910</jetty-version -->
+		<!-- jetty-version>7.2.0.v20101020</jetty-version -->
+		<!-- project.jettyVersion>9.0.3.v20130506</project.jettyVersion -->
+	</properties>
+
+	<!-- ============================================================== -->
+	<!-- Define the major contributors and developers of CADI -->
+	<!-- ============================================================== -->
+	<contributors>
+		<contributor>
+			<name>Jonathan Gathman</name>
+			<email>jonathan.gathman@att.com</email>
+			<timezone>CST</timezone>
+		</contributor>
+	</contributors>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<!-- ============================================================== -->
+	<!-- Define sub-projects (modules) -->
+	<!-- ============================================================== -->
+	<modules>
+		<module>core</module>
+		<module>client</module>
+		<module>aaf</module>
+		<module>cass</module>
+		<!-- <module>tguard</module> -->
+		<!-- <module>tomcat</module> -->
+		<!-- module>jetty</module -->
+		<!-- module>weblogic</module -->
+		<!-- always build last -->
+		<!--module>swm</module -->
+	</modules>
+
+	<!-- ============================================================== -->
+	<!-- Define project-wide dependencies -->
+	<!-- ============================================================== -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.att.authz</groupId>
+				<artifactId>authz-client</artifactId>
+				<version>${project.authClientVersion}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.att.cadi</groupId>
+				<artifactId>cadi-core</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.att.cadi</groupId>
+				<artifactId>cadi-core</artifactId>
+				<version>${project.version}</version>
+				<classifier>tests</classifier>
+			</dependency>
+
+			<dependency>
+				<groupId>com.att.cadi</groupId>
+				<artifactId>cadi-cass</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.att.cadi</groupId>
+				<artifactId>cadi-aaf</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.att.cadi</groupId>
+				<artifactId>cadi-aaf</artifactId>
+				<version>${project.version}</version>
+				<classifier>full</classifier>
+			</dependency>
+
+			<dependency>
+				<groupId>com.att.cadi</groupId>
+				<artifactId>cadi-client</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.att.cadi</groupId>
+				<artifactId>cadi-tomcat</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.att.cadi</groupId>
+				<artifactId>cadi-tguard</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.att.inno</groupId>
+				<artifactId>env</artifactId>
+				<version>${project.innoVersion}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.att.inno</groupId>
+				<artifactId>rosetta</artifactId>
+				<version>${project.innoVersion}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>gso</groupId>
+				<artifactId>gatekeeper</artifactId>
+				<version>1.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>gso</groupId>
+				<artifactId>pse_lite</artifactId>
+				<version>1.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>gso</groupId>
+				<artifactId>GLCookieDecryption</artifactId>
+				<version>1.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-servlet</artifactId>
+				<version>9.0.3.v20130506</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-webapp</artifactId>
+				<version>9.0.3.v20130506</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.eclipse.jetty.aggregate</groupId>
+				<artifactId>jetty-all</artifactId>
+				<version>9.0.3.v20130506</version>
+			</dependency>
+
+			
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>2.5</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.att.aft</groupId>
+				<artifactId>dme2</artifactId>
+				<!-- version>2.6.20</version -->
+				<!-- version>2.6.29</version -->
+				<!-- version>2.8.1</version -->
+				<!--  version>2.8.2.5</version -->
+				<version>${project.dme2Version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-log4j12</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>javax.servlet</groupId>
+						<artifactId>servlet-api</artifactId>
+					</exclusion>
+      					<exclusion>
+        					<groupId>javax.mail</groupId>
+        					<artifactId>mail</artifactId>
+      					</exclusion>
+
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.7.5</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<!-- ============================================================== -->
+	<!-- Define common plugins and make them available for all modules -->
+	<!-- ============================================================== -->
+	<build>
+		<testSourceDirectory>src/test/java</testSourceDirectory>
+		<plugins>
+			<plugin>
+				<inherited>true</inherited>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<version>2.4</version>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<outputDirectory>target</outputDirectory>
+					<archive>
+						<manifestEntries>
+							<Sealed>true</Sealed>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jarsigner-plugin</artifactId>
+				<version>1.2</version>
+				<executions>
+					<execution>
+						<id>sign</id>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+						<configuration>
+							<skip>${skipSigning}</skip>
+							<archive>target/${project.artifactId}-${project.version}.jar</archive>
+						</configuration>
+					</execution>
+					<execution>
+						<id>sign-full</id>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+						<configuration>
+							<skip>${skipSigning}</skip>
+							<archive>target/${project.artifactId}-${project.version}-full.jar</archive>
+						</configuration>
+					</execution>
+					<execution>
+						<id>verify</id>
+						<goals>
+							<goal>verify</goal>
+						</goals>
+						<configuration>
+							<archive>target/${project.artifactId}-${project.version}.jar</archive>
+						</configuration>
+					</execution>
+				</executions>
+				<configuration>
+					<skip>true</skip>
+					<alias>cadi</alias>
+					<keystore>../keys/aaf_cadi.jks</keystore>
+					<storepass>Surprise!</storepass>
+					<keypass>Surprise!</keypass>
+					<verbose>false</verbose>
+					<certs>true</certs>
+				</configuration>
+			</plugin>
+
+			<!-- Define the javadoc plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.10</version>
+				<configuration>
+					<excludePackageNames>org.opendaylight.*</excludePackageNames>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.2</version>
+				<configuration>
+					<goals>-s ${mvn.settings} deploy</goals>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.5.5</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.8.1</version>
+				<configuration>
+					<skip>false</skip>
+				</configuration>
+
+			</plugin>
+
+
+<plugin>
+	    <groupId>org.apache.maven.plugins</groupId>
+	    <artifactId>maven-gpg-plugin</artifactId>
+	    <version>1.5</version>
+	    <executions>
+		<execution>
+		    <id>sign-artifacts</id>
+		    <phase>verify</phase>
+		    <goals>
+			<goal>sign</goal>
+		    </goals>
+		</execution>
+	    </executions>
+	  </plugin> 
+		<plugin>
+			<groupId>org.sonatype.plugins</groupId>
+			<artifactId>nexus-staging-maven-plugin</artifactId>
+			<version>1.6.7</version>
+			<extensions>true</extensions>
+			<configuration>
+			<serverId>ossrhdme</serverId>
+			<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+			<autoReleaseAfterClose>true</autoReleaseAfterClose>
+			</configuration>
+		</plugin>
+			
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.10</version>
+			</plugin>
+
+			<!-- Maven surefire plugin for testing -->
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.17</version>
+				
+			</plugin>
+		</plugins>
+	</build>
+	
+	<!-- ============================================================== -->
+	<!-- Maven Central Repository Information -->
+	<!-- ============================================================== -->
+	
+	<scm>
+		<connection>https://github.com/att/AAF.git</connection>
+		<developerConnection>${project.scm.connection}</developerConnection>
+		<url>http://github.com/att/AAF/tree/master</url>
+	</scm>
+<distributionManagement>
+    		<snapshotRepository>
+      			<id>ossrhdme</id>
+      			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    		</snapshotRepository>
+    		<repository>
+      			<id>ossrhdme</id>
+      			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    		</repository>
+	</distributionManagement>
+	
+</project>

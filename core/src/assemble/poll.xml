@@ -1,0 +1,28 @@
+<!--
+    Copyright (c) 2017 AT&T Intellectual Property. All rights reserved.
+ -->
+
+<assembly>
+  <id>app</id>
+  <formats>
+    <format>jar</format>
+  </formats>
+  <includeBaseDirectory>false</includeBaseDirectory>
+  <dependencySets>
+    <dependencySet>
+      <outputDirectory></outputDirectory>
+      <outputFileNameMapping></outputFileNameMapping>
+      <unpack>true</unpack>
+      <scope>runtime</scope>
+      <!--  includes>
+        <include>web</include>
+      </includes -->
+    </dependencySet>
+  </dependencySets>
+  <fileSets>
+    <fileSet>
+      <directory>target/classes</directory>
+      <outputDirectory></outputDirectory>
+    </fileSet>
+   </fileSets>
+</assembly>

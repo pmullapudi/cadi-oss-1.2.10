@@ -1,0 +1,164 @@
+<!--
+    Copyright (c) 2017 AT&T Intellectual Property. All rights reserved.
+ -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>com.att.cadi</groupId>
+		<artifactId>parent</artifactId>
+		<relativePath>..</relativePath>
+		<version>1.2.10</version>
+	</parent>
+	
+	<modelVersion>4.0.0</modelVersion>
+	<name>CADI Core Framework (Code, Access, Data, Identity)</name>
+	<artifactId>cadi-core</artifactId>
+	<packaging>jar</packaging>
+	
+	<dependencies>
+		<!--  Use GLCookieDecryption
+		<dependency>
+			<groupId>gso</groupId>
+			<artifactId>gatekeeper</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>gso</groupId>
+			<artifactId>pse_lite</artifactId>
+			<scope>compile</scope>
+		</dependency>
+ 		-->
+ 		<!--  <dependency>
+			<groupId>gso</groupId>
+			<artifactId>GLCookieDecryption</artifactId>
+			<scope>compile</scope>
+		</dependency>  -->
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+  			<artifactId>slf4j-api</artifactId>
+  			<scope>provided</scope>
+		</dependency>
+		
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.att.cadi.CmdLine</mainClass>
+						</manifest>
+						<manifestEntries>
+							<Sealed>true</Sealed>
+						</manifestEntries>
+					</archive>
+				</configuration>
+				<executions>
+					<execution>
+						<id>test-jar</id>
+						<phase>package</phase>
+						<goals>
+							<goal>test-jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- plugin>
+		      <artifactId>maven-assembly-plugin</artifactId>
+		      <executions>
+		      	<execution>
+		      		<id>full</id>
+		      		<phase>package</phase>
+		      		<goals>
+		      			<goal>single</goal>
+		      		</goals>
+		      		<configuration>
+			      		 <descriptors>
+			          		<descriptor>src/assemble/cadi.xml</descriptor>
+			        	</descriptors>
+			        	<archive>
+				        	<manifest>
+				        		<mainClass>com.att.cadi.test.CSPServletTest</mainClass>
+				        	</manifest>
+				        </archive>
+		      		</configuration>
+		      	</execution>
+		      </executions>
+		    </plugin -->
+		    <plugin>
+		    	<!-- Must put this in to turn on Signing, but Configuration itself is in Parent -->
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-jarsigner-plugin</artifactId>
+		    	<configuration>
+		    		<skip>false</skip>
+		    	</configuration>
+		    </plugin>
+			
+		    <plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-deploy-plugin</artifactId>
+			<version>2.6</version>
+			<configuration>
+				<skip>false</skip>
+			</configuration>
+		    </plugin>
+		    
+		   <plugin>
+	    <groupId>org.apache.maven.plugins</groupId>
+	    <artifactId>maven-gpg-plugin</artifactId>
+	    <version>1.5</version>
+	    <executions>
+		<execution>
+		    <id>sign-artifacts</id>
+		    <phase>verify</phase>
+		    <goals>
+			<goal>sign</goal>
+		    </goals>
+		</execution>
+	    </executions>
+	  </plugin> 
+		<plugin>
+			<groupId>org.sonatype.plugins</groupId>
+			<artifactId>nexus-staging-maven-plugin</artifactId>
+			<version>1.6.7</version>
+			<extensions>true</extensions>
+			<configuration>
+			<serverId>ossrhdme</serverId>
+			<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+			<autoReleaseAfterClose>true</autoReleaseAfterClose>
+			</configuration>
+		</plugin>
+			
+		</plugins>
+	</build>
+
+<!-- ============================================================== -->
+	<!-- Maven Central Repository Information -->
+	<!-- ============================================================== -->
+	
+	<scm>
+		<connection>https://github.com/att/AAF.git</connection>
+		<developerConnection>${project.scm.connection}</developerConnection>
+		<url>http://github.com/att/AAF/tree/master</url>
+	</scm>
+<distributionManagement>
+    		<snapshotRepository>
+      			<id>ossrhdme</id>
+      			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    		</snapshotRepository>
+    		<repository>
+      			<id>ossrhdme</id>
+      			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    		</repository>
+	</distributionManagement>
+
+</project>

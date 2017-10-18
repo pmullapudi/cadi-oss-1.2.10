@@ -1,0 +1,67 @@
+<!-- Used by AAF (ATT inc 2013) -->
+<xs:schema elementFormDefault="qualified"
+		   targetNamespace="urn:aaf:xsd" 
+		   xmlns:aaf="urn:aaf:xsd" 
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   >
+
+	<xs:complexType name="role">
+		<xs:sequence>
+			<xs:element name="userName" type="xs:string" maxOccurs="1" />
+			<xs:element name="roleName" type="xs:string" maxOccurs="1"/>
+			<xs:element name="userType" type="xs:string" maxOccurs="1" />
+			<xs:element name="createUser" type="xs:string" maxOccurs="1" />
+			<xs:element name="createTimestamp" type="xs:string" maxOccurs="1" />
+			<xs:element name="modifyUser" type="xs:string" maxOccurs="1" />
+			<xs:element name="modifyTimestamp" type="xs:string" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+		   
+	<xs:element name="roles">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="roles" type="aaf:role" minOccurs="0" maxOccurs="unbounded" />      
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="permission">
+		<xs:sequence>
+			<xs:element name="permission" type="xs:string" maxOccurs="1" />
+			<xs:element name="resourceType" type="xs:string" maxOccurs="1" />
+			<xs:element name="resourceInstance" type="xs:string" maxOccurs="1" />
+			<xs:element name="action" type="xs:string" maxOccurs="1" />
+			<xs:element name="roleName" type="xs:string" maxOccurs="1" />
+			<xs:element name="createUser" type="xs:string" maxOccurs="1" />
+			<xs:element name="createTimestamp" type="xs:string" maxOccurs="1" />
+			<xs:element name="modifyUser" type="xs:string" maxOccurs="1" />
+			<xs:element name="modifyTimestamp" type="xs:string" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+		   
+	<xs:element name="permissions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="permissions" type="aaf:permission" minOccurs="0" maxOccurs="unbounded" />      
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+    <xs:complexType name="credentialVerfication">
+        <xs:sequence>
+            <xs:element name="isValid" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="credentialVerfications">
+        <xs:annotation>
+            <xs:documentation>credentialVerfications used by /authn API assumes just 1 userid/passwd but could handle an array of N checks </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="credentialVerfication" type="aaf:credentialVerfication" minOccurs="1"
+                            maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
