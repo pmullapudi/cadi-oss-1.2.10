@@ -146,9 +146,9 @@
 	<!-- ============================================================== -->
 	
 	<scm>
-		<connection>https://github.com/att/AAF.git</connection>
+		<connection>https://github.com/att/cadi-oss-1.2.10.git</connection>
 		<developerConnection>${project.scm.connection}</developerConnection>
-		<url>http://github.com/att/AAF/tree/master</url>
+		<url>http://github.com/att/cadi-oss-1.2.10/tree/master</url>
 	</scm>
 <distributionManagement>
     		<snapshotRepository>
