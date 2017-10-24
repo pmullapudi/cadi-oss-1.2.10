@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>com.att.cadi</groupId>
 		<artifactId>parent</artifactId>
-		<version>1.2.10-oss</version>
+		<version>1.2.11-oss</version>
 		<relativePath>..</relativePath>
 	</parent>
 

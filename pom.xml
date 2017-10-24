@@ -6,7 +6,7 @@
 	<groupId>com.att.cadi</groupId>
 	<artifactId>parent</artifactId>
 	<name>CADI Parent POM (Code, Access, Data, Identity)</name>
-	<version>1.2.10-oss</version>
+	<version>1.2.11-oss</version>
 	<inceptionYear>2015-07-20</inceptionYear>
 	<organization>
 		<name>AT&amp;T</name>
@@ -37,7 +37,7 @@
 		<!-- project.dme2Version>2.6.29</project.dme2Version -->
 		<!--project.dme2Version>2.8.2.5</project.dme2Version -->
 		<!-- <project.dme2Version>2.8.5.8</project.dme2Version>  -->
-		<project.dme2Version>3.1.200</project.dme2Version>
+		<project.dme2Version>3.1.200-oss</project.dme2Version>
 		<!-- jetty-version>8.1.7.v20120910</jetty-version -->
 		<!-- jetty-version>7.2.0.v20101020</jetty-version -->
 		<!-- project.jettyVersion>9.0.3.v20130506</project.jettyVersion -->
