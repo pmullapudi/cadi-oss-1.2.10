@@ -4,7 +4,6 @@
 /**
  * RolesAllowed 
  * 
- * @author jg1555
  * 
  * Similar to Java EE's Spec from Annotations 1.1, 2.8
  * 
@@ -24,7 +23,6 @@ import java.lang.annotation.Target;
  * JASPI Style Annotation of RolesAllowed when the coding style is desired but actually including all 
  * JEE jars is not. If using actual JASPI, use official @interface classes, not this one...
  * 
- * @author jg1555
  */
 @Target({TYPE})
 @Retention(RUNTIME)

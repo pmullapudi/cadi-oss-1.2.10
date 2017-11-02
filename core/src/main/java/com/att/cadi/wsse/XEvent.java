@@ -14,7 +14,6 @@ import javax.xml.stream.events.XMLEvent;
  * We implement the same interface, as much as minimally necessary, as XMLEvent for these small usages so as to
  * be interchangeable in the future, if so desired
  * 
- * @author jg1555
  *
  */
 // @SuppressWarnings("restriction")

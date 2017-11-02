@@ -15,7 +15,7 @@ import com.att.rosetta.Parsed;
  * Temporary Class until full Rosetta functionality arises.
  * 
  * These do, however, utilize maximum speed.
- * @author jg1555
+ * 
  *
  */
 public class JaxSetRoles implements JaxEval {

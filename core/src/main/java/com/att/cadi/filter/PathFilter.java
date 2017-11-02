@@ -26,7 +26,6 @@ import com.att.cadi.config.Config;
  * 
  * This class can be used in a standard J2EE Servlet manner.
  *  
- * @author jg1555, collaborating with Xue Gao
  *
  */
 public class PathFilter implements Filter {

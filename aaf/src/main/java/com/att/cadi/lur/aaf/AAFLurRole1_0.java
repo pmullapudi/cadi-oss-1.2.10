@@ -22,7 +22,7 @@ import com.att.rosetta.OutJax;
 
 /**
  * A Lur that checks AAF Roles (not Permissions.  For Permissions, see AAFLur)
- * @author jg1555
+ * 
  *
  */
 public class AAFLurRole1_0 extends AbsAAFLur<AAFRole> {

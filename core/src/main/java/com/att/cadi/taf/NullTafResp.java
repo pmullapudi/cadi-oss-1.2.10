@@ -11,7 +11,6 @@ import com.att.cadi.Access;
 
 /**
  * A Null Pattern for setting responses to "Deny" before configuration is setup.
- * @author jg1555
  *
  */
 class NullTafResp implements TafResp {

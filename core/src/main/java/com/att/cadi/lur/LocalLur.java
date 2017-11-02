@@ -23,7 +23,6 @@ import com.att.cadi.config.Config;
 /**
  * An in-memory Lur that can be configured locally with User info via properties, similar to Tomcat-users.xml mechanisms.
  * 
- * @author jg1555
  *
  */
 public final class LocalLur extends AbsUserCache<LocalPermission> implements CredVal, StrLur {

@@ -10,7 +10,7 @@ import com.att.cadi.Permission;
 /**
  * A Class that understands the AAF format of Permission (name/type/action)
  * 
- * @author jg1555
+ *
  *
  */
 public class AAFRole implements Permission {

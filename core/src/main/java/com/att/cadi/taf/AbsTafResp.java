@@ -12,7 +12,6 @@ import com.att.cadi.Access;
  * 
  * Base class for TafResp (TAF Response Objects)
  * 
- * @author jg1555
  *
  */
 public abstract class AbsTafResp implements TafResp {

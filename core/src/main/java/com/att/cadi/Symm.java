@@ -44,7 +44,6 @@ import com.att.cadi.config.Config;
  * However, this algorithm has not been tested against hackers.  Until such a time, utilize more tested
  * packages to protect Data, especially sensitive data at rest (long term). 
  * 
- * @author jg1555
  *
  */
 public class Symm {
@@ -356,7 +355,6 @@ public class Symm {
    
    /**
     * Interface to allow this class to choose which algorithm to find index of character in Key
-    * @author jg1555
     *
     */
    private interface Convert {
@@ -366,7 +364,6 @@ public class Symm {
    /**
     * Ordered uses a range of orders to compare against, rather than requiring the investigation
     * of every character needed.
-    * @author jg1555
     *
     */
    private static final class Ordered implements Convert {
@@ -393,7 +390,6 @@ public class Symm {
    /**
     * Unordered, i.e. the key is purposely randomized, simply has to investigate each character
     * until we find a match.
-    * @author jg1555
     *
     */
    private static final class Unordered implements Convert {

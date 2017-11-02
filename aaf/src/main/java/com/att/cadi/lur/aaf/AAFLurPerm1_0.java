@@ -27,7 +27,7 @@ import com.att.rosetta.OutJax;
  * 
  * If you want a simple Role Lur, use AAFRoleLur
  * 
- * @author jg1555
+ * 
  *
  */
 public class AAFLurPerm1_0 extends AbsAAFLur<AAFPermission> {

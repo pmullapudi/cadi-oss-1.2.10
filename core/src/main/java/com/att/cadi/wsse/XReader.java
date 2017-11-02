@@ -26,7 +26,6 @@ import javax.xml.stream.XMLStreamException;
  * At this time, we only implement the important events, though if this is good enough, it could be expanded, perhaps to 
  * replace the original XMLReader from StAX.
  * 
- * @author jg1555
  *
  */
 // @SuppressWarnings("restriction")
@@ -350,7 +349,6 @@ public class XReader {
 	 * Data is split up into prefix, name and value portions. "Tags" with Values that are inside a Tag are known in XLM
 	 * as Attributes.  
 	 * 
-	 * @author jg1555
 	 *
 	 */
 	public class Tag {

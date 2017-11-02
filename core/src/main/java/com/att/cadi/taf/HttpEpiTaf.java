@@ -22,7 +22,6 @@ import com.att.cadi.Taf.LifeForm;
  * 
  * An extension of the basic "EpiTAF" concept, check known HTTP Related TAFs for valid credentials
  * 
- * @author jg1555
  *
  */
 public class HttpEpiTaf implements HttpTaf {
@@ -105,7 +104,6 @@ public class HttpEpiTaf implements HttpTaf {
 	private LifeForm tricorderScan(HttpServletRequest req) {
 		// Current guess that only Browsers bother to set "Agent" codes that identify the kind of browser they are.
 		// If mechanical frameworks are found that populate this, then more advanced analysis may be required
-		// jg1555 1/22/2013
 		String agent = req.getHeader("User-Agent");
 		if(agent!=null && agent.startsWith("Mozilla")) // covers I.E./Firefox/Safari/probably any other "advanced" Browser see http://en.wikipedia.org/wiki/User_agent
 			return LifeForm.CBLF;                      

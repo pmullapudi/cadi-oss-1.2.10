@@ -14,7 +14,6 @@ import com.att.cadi.taf.TafResp;
  * 
  * Concept by Robert Garskof.  Implemented by Jonathan Gathman
  *  
- * @author jg1555
  *
  */
 public interface Taf {

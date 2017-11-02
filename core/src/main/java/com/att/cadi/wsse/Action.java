@@ -10,7 +10,6 @@ package com.att.cadi.wsse;
  * root "parse" call of Match.  Similar to a "Visitor" Pattern, this object is passed upon reaching the right
  * point in a parse tree.
  * 
- * @author jg1555
  *
  * @param <OUTPUT>
  */

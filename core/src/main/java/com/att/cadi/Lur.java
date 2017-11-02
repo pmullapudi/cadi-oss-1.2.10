@@ -17,7 +17,6 @@ import java.util.List;
  * 
  * Note: Author cannot resist the mental image of using a Fishing Lure to this LUR pattern 
  * 
- * @author jg1555
  *
  */
 public interface Lur {

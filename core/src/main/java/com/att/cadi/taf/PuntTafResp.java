@@ -11,7 +11,6 @@ import com.att.cadi.Access;
 /**
  * A Punt Resp to make it fast and easy for a Taf to respond that it cannot handle a particular kind of
  * request.  It is always the same object, so there is no cost for memory, etc.
- * @author jg1555
  *
  */
 public class PuntTafResp implements TafResp {

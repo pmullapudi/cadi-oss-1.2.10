@@ -16,7 +16,6 @@ import com.att.cadi.Taf.LifeForm;
  * Using the Http Request and Response interfaces takes the effort out of implementing in almost any kind of
  * HTTP Container or Engine.
  *  
- * @author jg1555
  *
  */
 public interface HttpTaf {

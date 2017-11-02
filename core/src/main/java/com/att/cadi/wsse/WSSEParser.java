@@ -22,7 +22,6 @@ import com.att.cadi.BasicCred;
  * 
  * It is as thread safe as StAX parsing is.
  * 
- * @author jg1555
  */
 @SuppressWarnings({ "unchecked" })
 public class WSSEParser {

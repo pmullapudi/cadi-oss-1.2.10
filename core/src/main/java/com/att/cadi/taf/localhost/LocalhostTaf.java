@@ -36,7 +36,6 @@ import com.att.cadi.taf.TafResp.RESP;
  * to run, are treated as validated.  This is primarily for Developer purposes.
  *   
  * 
- * @author jg1555
  *
  */
 public class LocalhostTaf implements HttpTaf {

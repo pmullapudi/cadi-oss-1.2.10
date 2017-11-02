@@ -13,7 +13,6 @@ package com.att.cadi;
  *  ID is official User or MechID, best if includes Identity Source (i.e. ab1234@csp.att.com)
  *  Protocol is the Security protocol,
  * 
- * @author jg1555
  *
  */
 public interface UserChain  {

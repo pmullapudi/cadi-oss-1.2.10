@@ -20,7 +20,6 @@ import javax.xml.stream.events.XMLEvent;
  * @see XEvent
  * @see XReader
  * 
- * @author jg1555
  *
  * @param <OUTPUT>
  */

@@ -23,7 +23,6 @@ import com.att.cadi.CachedPrincipal.Resp;
  * 
  * Also includes a Timer Thread (when necessary) to invoke cleanup on expiring Credentials
  * 
- * @author jg1555
  *
  */
 public abstract class AbsUserCache<PERM extends Permission> {
@@ -194,7 +193,6 @@ public abstract class AbsUserCache<PERM extends Permission> {
 	 * If "highs" have been exceeded, then we'll expire 10% more the next time.  This will adjust after each run
 	 * without checking contents more than once, making a good average "high" in the minimum speed.
 	 * 
-	 * @author jg1555
 	 *
 	 */
 	private final class Clean extends TimerTask {

@@ -9,7 +9,6 @@ package com.att.cadi;
  * The essential interface required by BasicAuth to determine if a given User/Password combination is 
  * valid.  This is done as an interface.
  * 
- * @author jg1555
  */
 //TODO add a generic "TRANS" so we can do Remote call timings 
 public interface CredVal {

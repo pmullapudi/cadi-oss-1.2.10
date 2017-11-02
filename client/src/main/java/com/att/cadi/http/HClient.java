@@ -30,7 +30,6 @@ import com.att.rosetta.env.RosettaDF;
  * Low Level Http Client Mechanism. Chances are, you want the high level "HRcli"
  * for Rosetta Object Translation
  * 
- * @author jg1555
  *
  */
 public class HClient implements EClient<HttpURLConnection> {

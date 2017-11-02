@@ -27,7 +27,6 @@ import com.att.inno.env.Data.TYPE;
  * 
  * JAXB defined JSON or XML over DME2 middleware
  * 
- * @author jg1555
  *
  * @param <T>
  */

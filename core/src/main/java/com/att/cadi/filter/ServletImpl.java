@@ -4,7 +4,6 @@
 /**
  * RolesAllowed 
  * 
- * @author jg1555
  * 
  * Similar to Java EE's Spec from Annotations 1.1, 2.8
  * 
@@ -24,7 +23,6 @@ import javax.servlet.Servlet;
 
 /**
  * 
- * @author jg1555
  */
 @Target({TYPE})
 @Retention(RUNTIME)

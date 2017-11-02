@@ -24,7 +24,6 @@ import com.att.cadi.Permission;
  * different Caching requirements.  For instance, the Local User Repo (with stand alone names), never expire, but might be
  * refreshed with a change in Configuration File, while the Remote Service based LURs will need to expire at prescribed intervals 
  * 
- * @author jg1555
  *
  */
 public final class EpiLur implements Lur {

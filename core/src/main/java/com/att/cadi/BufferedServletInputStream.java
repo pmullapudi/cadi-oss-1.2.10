@@ -25,7 +25,6 @@ import javax.servlet.ServletInputStream;
  * allocation would be too large for high performance transactions.
  *
  * 
- * @author jg1555
  *
  */
 public class BufferedServletInputStream extends ServletInputStream {

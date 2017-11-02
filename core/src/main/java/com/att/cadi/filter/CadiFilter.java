@@ -42,7 +42,6 @@ import com.att.cadi.taf.TafResp;
  * be modeled after the "init" and "doFilter" functions, and be kept up to date as this class changes.
  * 
  * 
- * @author jg1555
  *
  */
 public class CadiFilter extends CadiAccess implements Filter {
@@ -296,7 +295,6 @@ public class CadiFilter extends CadiAccess implements Filter {
 	
 	/**
 	 * store PermConverters by Path prefix
-	 * @author jg1555
 	 *
 	 */
 	private class Pair {

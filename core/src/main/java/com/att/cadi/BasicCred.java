@@ -8,7 +8,6 @@ package com.att.cadi;
  * It works for CadiWrap, but also, Container Specific Wraps (aka Tomcat) should also
  * implement.
  * 
- * @author jg1555
  *
  */
 public interface BasicCred extends GetCred {

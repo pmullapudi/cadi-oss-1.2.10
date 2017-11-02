@@ -14,7 +14,6 @@ public interface Get {
 	
 	/**
 	 * A class for Getting info out of "JavaBean" format
-	 * @author jg1555
 	 *
 	 */
 	public static class Bean implements Get {

@@ -7,7 +7,6 @@ import java.security.Principal;
 
 /**
  * Indicate a TGuard Principal that is trusted as a TGuardPrincipal.  
- * @author jg1555
  *
  */
 public interface TGuardPrincipal_T extends Principal {

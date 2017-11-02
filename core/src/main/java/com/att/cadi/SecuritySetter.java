@@ -9,7 +9,6 @@ package com.att.cadi;
  *  
  *  This allows the definition of various mechanisms involved outside of DRcli jars 
  *  
- * @author jg1555
  *
  */
 public interface SecuritySetter<CT> {

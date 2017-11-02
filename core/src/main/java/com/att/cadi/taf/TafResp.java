@@ -12,7 +12,6 @@ import com.att.cadi.CadiException;
 /**
  * Response from Taf objects, which inform users what has happened and/or what should be done
  * 
- * @author jg1555
  *
  */
 public interface TafResp {

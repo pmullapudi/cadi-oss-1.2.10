@@ -17,7 +17,6 @@ import com.att.cadi.config.Config;
  * Note: we don't put this Principal in the main Principal folder, because we want to 
  * hide the extract function
  * 
- * @author jg1555
  *
  */
 public class CSPPrincipal implements CachedPrincipal {

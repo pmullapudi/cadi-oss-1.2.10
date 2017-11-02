@@ -14,7 +14,6 @@ import com.att.cadi.lur.LocalPermission;
 /**
  * Class to hold info from the User Perspective.
  * 
- * @author jg1555
  *
  */
 public final class User<PERM extends Permission> {

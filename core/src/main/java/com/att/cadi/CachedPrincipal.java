@@ -8,7 +8,6 @@ import java.security.Principal;
 /**
  * Cached Principals need to be able to revalidate in the background.
  * 
- * @author jg1555
  *
  */
 public interface CachedPrincipal extends Principal {

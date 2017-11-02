@@ -22,7 +22,7 @@ import com.att.cadi.principal.CSPPrincipal_T;
  * attUIDs look like ab1234 or AB1234 or AZ123a
  * mechids look like m12345
  * 
- * @author jg1555
+ * 
  *
  */
 public final class AAFTransmutate implements Transmutate<Principal> {
@@ -51,7 +51,7 @@ public final class AAFTransmutate implements Transmutate<Principal> {
 	/**
 	 * Essential Principal reflecting CSP Principal
 	 * 
-	 * @author jg1555
+	 * 
 	 *
 	 */
 	private final class CSP_T implements CSPPrincipal_T {

@@ -28,7 +28,6 @@ import com.att.cadi.taf.TafResp;
  * Specialty cases, i.e. Tomcat, which for their containers utilize their own mechanisms and Wrappers, you may
  * need something similar.  See AppServer specific code (i.e. tomcat) for these.
  * 
- * @author jg1555
  *
  */
 public class CadiWrap extends HttpServletRequestWrapper implements HttpServletRequest, BasicCred {

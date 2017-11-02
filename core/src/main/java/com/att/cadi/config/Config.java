@@ -45,7 +45,6 @@ import com.att.cadi.taf.localhost.LocalhostTaf;
  * Create a Consistent Configuration mechanism, even when configuration styles are as vastly different as
  * Properties vs JavaBeans vs FilterConfigs...
  * 
- * @author jg1555
  *
  */
 public class Config {

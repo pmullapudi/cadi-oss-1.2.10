@@ -21,7 +21,6 @@ import com.att.cadi.taf.csp.CSPTaf;
  * lookups on the machine work in most cases, sometimes, names and IPs are unexpected (and
  * invalid) for CSP because of multiple NetworkInterfaces, etc
  * 
- * @author jg1555
  *
  */
 public class CmdLine {
@@ -70,7 +69,7 @@ public class CmdLine {
 					System.err.println("   \""+ e.getMessage() + '"');
 				}
 // DO NOT LEAVE THIS METHOD Compiled IN CODE... Do not want looking at passwords on disk too easy
-// jg1555.  Oh, well, Deployment services need this behavior.  I will put this code in, but leave it undocumented. 
+// Oh, well, Deployment services need this behavior.  I will put this code in, but leave it undocumented. 
 // One still needs access to the keyfile to read.
 			} else if("regurgitate".equalsIgnoreCase(args[0]) && args.length>2) {
 				try {

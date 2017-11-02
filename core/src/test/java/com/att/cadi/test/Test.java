@@ -14,7 +14,7 @@ import com.att.cadi.taf.csp.CSPTaf;
  * lookups on the machine work in most cases, sometimes, names and IPs are unexpected (and
  * invalid) for CSP because of multiple NetworkInterfaces, etc
  * 
- * @author jg1555
+ * 
  *
  */
 public class Test {

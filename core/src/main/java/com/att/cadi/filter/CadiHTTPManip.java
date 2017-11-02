@@ -23,7 +23,6 @@ import com.att.cadi.taf.TafResp;
  * A more Standalone Authentication mechanism.  It will appropriately set
  * HTTPServletResponse for Redirect or Forbidden, as needed.
  * 
- * @author jg1555
  *
  */
 public class CadiHTTPManip {

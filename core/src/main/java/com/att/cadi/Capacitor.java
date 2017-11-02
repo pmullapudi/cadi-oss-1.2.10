@@ -13,7 +13,6 @@ import java.util.ArrayList;
  * 
  * The Standard BufferedInputStream requires a limit to be set for buffered reading, which is 
  * impractical for reading SOAP headers, which can be quite large.
- * @author jg1555
  *
  */
 public class Capacitor {

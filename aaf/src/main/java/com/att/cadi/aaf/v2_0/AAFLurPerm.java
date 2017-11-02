@@ -28,7 +28,7 @@ import com.att.inno.env.APIException;
  * 
  * If you want a simple Role Lur, use AAFRoleLur
  * 
- * @author jg1555
+ * 
  *
  */
 public class AAFLurPerm extends AbsAAFLur<AAFPermission> {

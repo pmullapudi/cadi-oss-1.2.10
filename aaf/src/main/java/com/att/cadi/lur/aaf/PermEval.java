@@ -23,7 +23,7 @@ public class PermEval {
 	 * 
 	 * sInst = Server's Instance
 	 * In order to prevent false matches, keys must be the same length to count as equal
-	 * Changing this will break existing users, like Cassandra.  jg1555 9-4-2015
+	 * Changing this will break existing users, like Cassandra.  9-4-2015
 	 */
 	 public static boolean evalInstance(String sInst, String pInst) {
 		  if(ASTERIX.equals(sInst)) return true;			// If Server's String is "*", then it accepts every Instance

@@ -13,7 +13,6 @@ import java.security.Principal;
  * The Generic "T" is used so that the code used will be very specific for the implementation, enforced by Compiler
  * 
  * This interface will allow differences of trusting Transmutation of Authentication 
- * @author jg1555
  *
  */
 public interface Transmutate<T> {

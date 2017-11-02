@@ -17,7 +17,6 @@ import javax.servlet.http.HttpServletRequest;
  * 
  * Framework needs to set the TafResp and Lur (typically) later in the 
  * 
- * @author jg1555
  *
  */
 public class BufferedCadiWrap extends CadiWrap {

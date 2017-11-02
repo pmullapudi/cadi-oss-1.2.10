@@ -35,7 +35,6 @@ import com.att.cadi.taf.dos.DenialOfServiceTaf;
  * their internal network is secure, or just ignorance.  Therefore, a WARNING will be printed
  * when the HTTP Channel is not encrypted (unless explicitly turned off).
  * 
- * @author jg1555
  *
  */
 public class BasicHttpTaf implements HttpTaf {

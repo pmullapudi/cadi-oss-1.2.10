@@ -12,7 +12,6 @@ import com.att.cadi.taf.HttpTaf;
 /**
  * Cached Principals need to be able to revalidate in the Background
  * 
- * @author jg1555
  *
  */
 public class CachedBasicPrincipal extends BasicPrincipal implements CachedPrincipal {

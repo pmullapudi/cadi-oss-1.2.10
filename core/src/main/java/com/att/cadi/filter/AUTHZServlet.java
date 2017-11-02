@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 
- * @author jg1555
  *
  */
 public class AUTHZServlet<S extends Servlet> implements Servlet {

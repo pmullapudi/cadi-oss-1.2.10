@@ -10,7 +10,6 @@ import java.util.List;
 /**
  * StrLUR: Implements fish with String, skipping the need to be a Principal where it doesn't make sense.
  *
- * @author jg1555
  *
  */
 public interface StrLur extends Lur {

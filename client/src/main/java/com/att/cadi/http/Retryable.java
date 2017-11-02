@@ -8,7 +8,6 @@ import com.att.cadi.client.Rcli;
 
 /**
  * 
- * @author jg1555
  *
  * @param <RT>
  * @param <RET>

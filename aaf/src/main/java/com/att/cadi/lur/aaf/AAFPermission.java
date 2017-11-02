@@ -9,7 +9,7 @@ import com.att.cadi.Permission;
  * A Class that understands the AAF format of Permission (name/type/action)
  *  or String "name|type|action"
  * 
- * @author jg1555
+ * 
  *
  */
 public class AAFPermission implements Permission {
@@ -39,7 +39,7 @@ public class AAFPermission implements Permission {
 			AAFPermission ap = (AAFPermission)p;
 			// Note: In AAF > 1.0, Accepting "*" from name would violate multi-tenancy
 			// Current solution is only allow direct match on Type.
-			// 8/28/2014 jg1555 - added REGEX ability
+			
 			if(type.equals(ap.getName()))  
 				if(PermEval.evalInstance(instance,ap.getInstance()))
 					if(PermEval.evalAction(action,ap.getAction()))

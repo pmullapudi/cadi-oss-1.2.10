@@ -9,7 +9,6 @@ package com.att.cadi.filter;
  * 
  * Obey the PermConverter Interface, but passed in "minimal" String is not converted.
  * 
- * @author jg1555
  *
  */
 public class NullPermConverter implements PermConverter {

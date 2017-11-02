@@ -5,7 +5,6 @@ package com.att.cadi;
 
 /**
  * CADI Specific Exception
- * @author jg1555
  */
 public class CadiException extends Exception {
 	/**

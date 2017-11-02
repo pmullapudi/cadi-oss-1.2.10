@@ -7,7 +7,6 @@ import java.security.Principal;
 
 /**
  * Indicate a CSP Principal that is trusted as a CSPPrincipal.  
- * @author jg1555
  *
  */
 public interface CSPPrincipal_T extends Principal {

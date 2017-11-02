@@ -9,7 +9,7 @@ import aaf.xsd.Permission;
  * AAF 1.0, unfortunately, has a bad return structure.  Here, we'll 
  * split it out correctly.
  * 
- * @author jg1555
+ * 
  *
  */
 public class AAF_1_0_Permission extends AAFPermission {

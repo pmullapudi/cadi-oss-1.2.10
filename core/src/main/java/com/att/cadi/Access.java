@@ -12,7 +12,6 @@ import java.io.InputStream;
  * mechanism, whether it be a Logging Object within a Servlet Context, or a direct library like log4j.
  * This interface, therefore, allows maximum pluggability in a variety of different app styles.  
  *  
- * @author jg1555
  *
  */
 public interface Access {

@@ -14,7 +14,6 @@ import com.att.cadi.Taf;
  * OK, the name could probably be better as "Tafs", like it was originally, but the pun was too
  * irresistible for this author to pass up.
  * 
- * @author jg1555
  *
  */
 public class EpiTaf implements Taf {

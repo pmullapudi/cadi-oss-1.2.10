@@ -125,7 +125,7 @@ public class JU_BufferedServletInputStream {
 
 	// "Bug" 4/22/2013 
 	// Some XML code expects Buffered InputStream can never return 0...  This isn't actually true, but we'll accommodate as far
-	// as we can.  jg1555
+	// as we can.  
 	// Here, we make sure we set and read the Buffered data, making sure the buffer is empty on the last test...
 	@Test
 	public void issue04_22_2013() throws IOException {
