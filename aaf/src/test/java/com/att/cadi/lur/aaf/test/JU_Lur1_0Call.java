@@ -41,7 +41,7 @@ public class JU_Lur1_0Call {
 				200); // High Count of items.. These do not take much memory
 
 
-		Principal pri = new ConfigPrincipal("jg1555","");
+		Principal pri = new ConfigPrincipal("ab1234","");
 
 		List<Permission> perms = new ArrayList<Permission>();
 		aafLur.fishAll(pri, perms);
@@ -76,7 +76,7 @@ public class JU_Lur1_0Call {
 				5000, // 5 seconds after Expiration
 				200); // High Count of items.. These do not take much memory
 
-		Principal pri = new ConfigPrincipal("jg1555","");
+		Principal pri = new ConfigPrincipal("ab1234","");
 		for (int i = 0; i < 10; ++i) {
 			print(aafLur, pri, new LocalPermission("com.att.cadi"),true);
 			print(aafLur, pri, new LocalPermission("global"),true);

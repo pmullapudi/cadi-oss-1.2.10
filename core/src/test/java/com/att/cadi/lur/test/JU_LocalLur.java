@@ -35,18 +35,18 @@ public class JU_LocalLur {
 		baos.write(Symm.ENC.getBytes());
 		symmetric.enpass("whatever", baos);
 		TestAccess ta = new TestAccess(symmetric);
-		Lur ml = up = new LocalLur(ta,"jg1555:groupA,groupB","admin:jg1555,kj2534;suser:lm1533,yu2344,m1234%"+baos.toString());
+		Lur ml = up = new LocalLur(ta,"ab1234:groupA,groupB","admin:ab1234,ll675;suser:ll456,jux56,m1234%"+baos.toString());
 		
 		Permission admin = new LocalPermission("admin");
 		Permission suser = new LocalPermission("suser");
 		
 		// Check User fish
-		assertTrue(ml.fish(new JUPrincipal("jg1555"),admin));
-		assertTrue(ml.fish(new JUPrincipal("kj2534"),admin));
-		assertFalse(ml.fish(new JUPrincipal("nm5333"),admin));
-		assertTrue(ml.fish(new JUPrincipal("lm1533"),suser));
-		assertTrue(ml.fish(new JUPrincipal("yu2344"),suser));
-		assertFalse(ml.fish(new JUPrincipal("jg1555"),suser));
+		assertTrue(ml.fish(new JUPrincipal("ab1234"),admin));
+		assertTrue(ml.fish(new JUPrincipal("ll675"),admin));
+		assertFalse(ml.fish(new JUPrincipal("ll567"),admin));
+		assertTrue(ml.fish(new JUPrincipal("ll456"),suser));
+		assertTrue(ml.fish(new JUPrincipal("jux56"),suser));
+		assertFalse(ml.fish(new JUPrincipal("ab1234"),suser));
 		
 		
 		// Check validate password
@@ -56,7 +56,7 @@ public class JU_LocalLur {
 		// Check fishAll
 		Set<String> set = new TreeSet<String>();
 		List<Permission> perms = new ArrayList<Permission>();
-		ml.fishAll(new JUPrincipal("jg1555"), perms);
+		ml.fishAll(new JUPrincipal("ab1234"), perms);
 		for(Permission p : perms) {
 			set.add(p.getKey());
 		}

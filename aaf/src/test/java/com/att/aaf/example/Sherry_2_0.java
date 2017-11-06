@@ -106,18 +106,18 @@ public class Sherry_2_0 {
 				// Or you can all for all the Permissions available
 				List<Permission> perms = new ArrayList<Permission>();
 				
-				aafLur.fishAll("jg1555@csp.att.com",perms);
+				aafLur.fishAll("ab1234@csp.abc.com",perms);
 				System.out.println("Perms for " + id);
 				for(Permission prm : perms) {
 					System.out.println(prm.getKey());
 				}
 				
-				if(aafLur.fish("jg1555@csp.att.com",new LocalPermission("com.att.aaf.jenkins	|  mithrilcsp.sbc.com		| admin")))
+				if(aafLur.fish("ab1234@csp.abc.com",new LocalPermission("com.att.aaf.jenkins	|  mithrilcsp.sbc.com		| admin")))
 					System.out.println("Yep, uhuh, have jenkins Mith etc");
 				else 
 					System.out.println("Nope, uhoh, have not jenkins Mith etc");
 
-				if(aafLur.fish("jg1555@csp.att.com",new LocalPermission("com.att.aaf.jenkins|mithrilcsp.sbc.com|admin")))
+				if(aafLur.fish("ab1234@csp.abc.com",new LocalPermission("com.att.aaf.jenkins|mithrilcsp.sbc.com|admin")))
 					System.out.println("Yep, uhuh, have jenkins Mith etc");
 				else 
 					System.out.println("Nope, uhoh, have not jenkins Mith etc");
@@ -125,7 +125,7 @@ public class Sherry_2_0 {
 				// Make Direct API Calls
 				System.out.println("Direct API reads");
 				// This will make the call, but not receive... Allows you to be asyncronous
-				Future<Roles> froles = con.client.read("/authz/roles/user/jg1555@csp.att.com", rolesDF);
+				Future<Roles> froles = con.client.read("/authz/roles/user/ab1234@csp.abc.com", rolesDF);
 				if(froles.get(5000 /*timeout*/)) {
 					// Is true if HTTP is the accepted HTTP Code for the call, in this case, 200
 					// You can depend on froles.value to be populated

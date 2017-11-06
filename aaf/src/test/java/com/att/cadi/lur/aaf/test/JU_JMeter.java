@@ -67,7 +67,7 @@ public class JU_JMeter {
 				perfIDs.add(new CachedBasicPrincipal(aafTaf, 
 						"Basic dGVzdGlkOndoYXRldmVy", 
 						"aaf.att.com",timeToLive));
-				perfIDs.add(new Princ("jg1555@aaf.att.com")); // Example of Local ID, which isn't looked up
+				perfIDs.add(new Princ("ab1234@csp.abc.com")); // Example of Local ID, which isn't looked up
 			} else {
 				BufferedReader ir = new BufferedReader(new FileReader(perfFile));
 				try {
